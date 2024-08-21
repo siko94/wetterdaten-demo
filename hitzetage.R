@@ -49,7 +49,6 @@ station_data <- bind_rows(
     date = mess_datum,
     t_max = txk_lufttemperatur_max
   ) %>% 
-  
   mutate(
     # Fehlwerte (in den DWD-Rohdaten als -999) in NAs umwandeln
     t_max = if_else(t_max == -999, true = NA, false = t_max)
@@ -82,7 +81,6 @@ heat_days <- station_data %>%
 
 glimpse(heat_days)
 
-
 ###############################################
 # 4. Mit Datawrapper visualisieren
 
@@ -96,7 +94,6 @@ chart <- dw_create_chart(
 
 # Daten an das Diagramm schicken
 dw_data_to_chart(heat_days, chart_id = chart)
-
 
 # Darstellung, Beschriftung etc. bearbeiten
 dw_edit_chart(
