@@ -88,7 +88,7 @@ glimpse(heat_days)
 chart <- dw_create_chart(
   # Überschrift des Diagramms
   title = "So hat sich die Zahl der Hitzetage entwickelt",
-  # Typ: Liniendiagramm
+  # Typ: Säulendiagramm
   type = "column-chart"
 )
 
